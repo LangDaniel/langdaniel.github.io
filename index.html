@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <div>
+    <head>
+        <title>Daniel Lang</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./main.css">
+        */ include bootstrap */
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        >
+        */ include font awesome */
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            // flip to backside and set display to block if none
+            function show_backside(id) {
+                var foc = document.querySelector('#flip-toggle')
+                foc.classList.toggle('focus');
+                var sec = document.getElementById(id);
+                console.log(sec.style.display);
+                if (sec.style.display == 'none'){
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            };
+            // flip to frontside and set all items to display=none
+            function show_frontside() {
+                var foc = document.querySelector('#flip-toggle')
+                foc.classList.toggle('focus');
+                var sections = document.getElementsByClassName("backsection");
+                for (var i = 0; i < sections.length; i++) {
+                    sections.item(i).style.display = 'none';
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="flip-container" id="flip-toggle">
+            	<div class="flipper">
+            		<div class="front">
+            			<!-- front content -->
+                        <header>
+                            <!-- <span><img src="images/image.png" width="140" height="140" /></span> -->
+                            <h1 style="margin-top:40px;">Daniel Lang</h1>
+                            <p id="intro">
+                            PhD candidate at Helmholtz Center Munich and Technical University Munich.
+                            Visiting scientist at university hospital Klinikum rechts der Isar.
+                            </p>
+                        </header>
+                        <nav id="navi">
+                            <button type="button", class="btn btn-outline-dark" onclick='show_backside("aboutme");'>ABOUT ME</button>
+                            <button type="button", class="btn btn-outline-dark" onclick='show_backside("publications");'>PUBLICATIONS</button>
+                        </nav>
+                        <footer id="footer">
+                            <ul class="icons">
+                                <li><a href="https://github.com/LangDaniel" class="fa fa-github fa-2x"> GitHub</a></li>
+                                <li><a href="mailto:lang.helmholtz-muenchen.de" class="fa fa-envelope fa-2x"> Mail</a></li>
+                                <li><a href="https://orcid.org/0000-0003-0274-9069" class="fa fa-file-text-o fa-2x"> ORCiD</a></li>
+                            </ul>
+                            <span id="linkHoverText"></span>
+                        </footer>
+            		</div>
+            		<div class="back">
+            			<!-- back content -->
+                        <header>
+                            <section id="aboutme" class="backsection" style="display:none;">
+                                <h1>About me</h1>
+                                    <div id="abouttext">
+                                        I am a physicist driven by the search for innovative solutions to problems affecting peoples lives.
+                                        Tools and research areas that I am especially interested in are Deep Learning and Machine Learning
+                                        in general, data science and programming on the whole.
+                                        I favor open source software and believe in the necessity of a free and fair internet.
+                                    </div>
+                            </section>
+                            <section id="publications" class="backsection" style="display:none;text-align:left">
+                                <h1>Publications</h1>
+                                    <ul class="publist">
+                                        <h3>2020</h3>
+                                            <li>
+                                                Sum rule improved double parton distributions in position space
+                                                [<a href="https://link.springer.com/article/10.1140/epjc/s10052-020-8038-z" class="publink"><i>Eur. Phys. J. C 80</i></a>]
+                                            </li>
+                                            <li>
+                                                Deep learning based gross tumor volume definition on planning CTs of soft tissue sarcoma
+                                                [<a href="https://cld.bz/WxarAcp/870/" class="publink"><i>ESTRO2020 Abstract</i></a>]
+                                            </li>
+                                        <h3>2021</h3>
+                                            <li>
+                                                Deep Learning Based HPV Status Prediction for Oropharyngeal Cancer Patients 
+                                                [<a href="https://www.mdpi.com/2072-6694/13/4/786" class="publink"><nobr><i>Cancers 13(4)</i></nobr></a>]
+                                                [<a href="https://arxiv.org/abs/2011.08555" class="publink"><i>arXiv</i></a>]
+                                                [<a href="https://github.com/LangDaniel/hpv_status" class="publink"><i>GitHub</i></a>]
+                                            </li>
+                                            <li>
+                                                Deep learning based GTV delineation and progression free survival risk score prediction for
+                                                head and neck cancer patients 
+                                                [<i>Under revision</i>]
+                                                [<a href="https://github.com/LangDaniel/HECKTOR2021" class="publink"><i>GitHub</i></a>]
+                                            </li>
+                                    </ul>
+                            </section>
+                        </header>
+                        <footer id="footer">
+                            <button type="button" class="btn btn-outline-dark" onclick='show_frontside();'>Front</button>
+                        </footer>
+            		</div>
+            	</div>
+            </div>
+        </div>
+    </body>
+</html>
+
