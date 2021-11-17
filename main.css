@@ -98,6 +98,8 @@ ul.icons li a:hover, ul.icons li a:focus {
 
 .publist li {
     color: black;
+    width: 90%;
+    margin-left: 20px;
 }
 
 .publink {
