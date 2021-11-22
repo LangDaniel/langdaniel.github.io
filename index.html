@@ -6,15 +6,16 @@
         <title>Daniel Lang</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./main.css">
-        */ include bootstrap */
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="./css/main.css">
+        <link rel="stylesheet" media="screen and (max-width: 800px)" href="./css/moblie.css">
+        <!-- include bootstrap -->
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
             crossorigin="anonymous"
         >
-        */ include font awesome */
+        <!-- include font awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
             // flip to backside and set display to block if none
@@ -22,12 +23,7 @@
                 var foc = document.querySelector('#flip-toggle')
                 foc.classList.toggle('focus');
                 var sec = document.getElementById(id);
-                console.log(sec.style.display);
-                if (sec.style.display == 'none'){
-                    sec.style.display = 'block';
-                } else {
-                    sec.style.display = 'none';
-                }
+                sec.style.display = 'block'
             };
             // flip to frontside and set all items to display=none
             function show_frontside() {
@@ -40,7 +36,7 @@
             };
         </script>
     </head>
-    <body>
+    <body id=page>
         <div id="wrapper">
             <div class="flip-container" id="flip-toggle">
             	<div class="flipper">
@@ -71,7 +67,7 @@
             		<div class="back">
             			<!-- back content -->
                         <header>
-                            <section id="aboutme" class="backsection" style="display:none;">
+                            <section id="aboutme" class="backsection">
                                 <h1>About me</h1>
                                     <div id="abouttext">
                                         I am a physicist driven by the search for innovative solutions to problems affecting peoples lives.
@@ -81,8 +77,8 @@
                                         This makes me believe that open-sourcing code is really desirable if not even inevitable.
                                     </div>
                             </section>
-                            <section id="publications" class="backsection" style="display:none;text-align:left">
-                                <h1 style="margin-left:20px;">Publications</h1>
+                            <section id="publications" class="backsection">
+                                <h1 style="text-align:center;">Publications</h1>
                                     <ul class="publist">
                                         <h3>2020</h3>
                                             <li>
@@ -110,7 +106,7 @@
                             </section>
                         </header>
                         <footer id="footer">
-                            <button type="button" class="btn btn-outline-dark" onclick='show_frontside();' style="margin-top:25px;">Back</button>
+                            <button type="button" id="back-btn" class="btn btn-outline-dark" onclick='show_frontside();' style="margin-top:25px;">Back</button>
                         </footer>
             		</div>
             	</div>
