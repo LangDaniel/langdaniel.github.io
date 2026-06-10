@@ -1,0 +1,112 @@
+---
+interface Props {
+  email?: string;
+  github?: string;
+  googleScholar?: string;
+  linkedin?: string;
+  website?: string;
+  websiteUrl?: string;
+}
+
+const {
+  email,
+  github,
+  googleScholar,
+  linkedin,
+  website = "work",
+  websiteUrl = "https://yourwebsite.com"
+} = Astro.props;
+---
+
+<div class="contact-bar">
+  <div class="contact-container">
+    {email && (
+      <a href={`mailto:${email}`} class="contact-link" title="Email">
+        <i class="fas fa-envelope"></i>
+        <span>Mail</span>
+      </a>
+    )}
+    {github && (
+      <a href={github} class="contact-link" target="_blank" rel="noopener noreferrer" title="GitHub">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    )}
+    {googleScholar && (
+      <a href={googleScholar} class="contact-link" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Google Scholar</span>
+      </a>
+    )}
+    {linkedin && (
+      <a href={linkedin} class="contact-link" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    )}
+    <a href={websiteUrl} class="contact-link" target="_blank" rel="noopener noreferrer" title="Website">
+      <i class="fas fa-globe"></i>
+      <span>{website}</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .contact-bar {
+    background-color: #ffffff;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  :global(body.dark-mode) .contact-bar {
+    background-color: #0f172a;
+    border-bottom-color: #1e293b;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+  }
+
+  .contact-link:not(div) {
+    cursor: pointer;
+  }
+
+  .contact-link a:hover,
+  a.contact-link:hover {
+    color: #1f2937;
+  }
+
+  :global(body.dark-mode) .contact-link {
+    color: #00ff88;
+  }
+
+  :global(body.dark-mode) .contact-link a:hover,
+  :global(body.dark-mode) a.contact-link:hover {
+    color: #00ffaa;
+  }
+
+  .contact-link i {
+    font-size: 1.2rem;
+  }
+
+  .contact-link span {
+    font-weight: 400;
+  }
+</style>

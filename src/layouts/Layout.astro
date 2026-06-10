@@ -1,0 +1,72 @@
+---
+import Header from '../components/Header.astro';
+import ContactBar from '../components/ContactBar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  email?: string;
+  github?: string;
+  googleScholar?: string;
+  linkedin?: string;
+  website?: string;
+  websiteUrl?: string;
+}
+
+const {
+	title = "Daniel M. Lang",
+	description = "Personal Website",
+	email,
+	github,
+	googleScholar,
+	linkedin,
+	website,
+	websiteUrl
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<ContactBar email={email} github={github} googleScholar={googleScholar} linkedin={linkedin} website={website} websiteUrl={websiteUrl} />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+	* {
+		font-family: 'Inter', sans-serif;
+	}
+
+	body {
+		background-color: #ffffff;
+		color: #1f2937;
+		transition: all 0.3s ease;
+		margin: 0;
+		padding: 0;
+	}
+
+	body.dark-mode {
+		background-color: #0f172a;
+		color: #ffffff;
+	}
+
+	html[data-theme="light"] {
+		color-scheme: light;
+	}
+
+	html[data-theme="dark"] {
+		color-scheme: dark;
+	}
+</style>

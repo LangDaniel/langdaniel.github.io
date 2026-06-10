@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutContent from '../content/about.md';
+import PublicationCard from '../components/PublicationCard.astro';
+import CVEntry from '../components/CVEntry.astro';
+import publications from '../data/publications.json';
+import resume from '../data/resume.json';
+---
+
+<Layout
+  title="Daniel M. Lang"
+  description="Personal Website"
+  email="lang@helmholtz-munich.de"
+  github="https://github.com/LangDaniel"
+  googleScholar="https://scholar.google.com/citations?user=AV04Hs4AAAAJ&hl=en"
+  linkedin="https://www.linkedin.com/in/daniel-m-lang/"
+  website="Work"
+  websiteUrl="https://compai-lab.github.io/author/daniel-m.-lang/"
+>
+	<main>
+		<section id="about">
+			<h2>Hi! I'm Daniel</h2>
+			<AboutContent />
+		</section>
+
+		<section id="publications">
+			<h2>Publications</h2>
+			<div>For a comprehensive list have a look on Google Scholar.</div>
+			<div class="publications-list">
+				{publications.map((pub) => (
+					<PublicationCard {...pub} />
+				))}
+			</div>
+		</section>
+
+		<section id="resume">
+			<h2>Resume</h2>
+			<div class="resume-section">
+				<h3>Experience</h3>
+				<div class="cv-list">
+					{resume.experience.map((entry) => (
+						<CVEntry {...entry} />
+					))}
+				</div>
+			</div>
+			<div class="resume-section">
+				<h3>Education</h3>
+				<div class="cv-list">
+					{resume.education.map((entry) => (
+						<CVEntry {...entry} />
+					))}
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		main {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 4rem 2rem;
+		}
+
+		section {
+			margin-bottom: 4rem;
+		}
+
+		.resume-section {
+			margin-bottom: 2rem;
+		}
+
+		.resume-section h3 {
+			font-size: 1.1rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+		}
+	</style>
+</Layout>

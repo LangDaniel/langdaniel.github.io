@@ -1,0 +1,181 @@
+---
+interface Props {
+  title: string;
+  image?: string;
+  authors: string;
+  year: number;
+  journal: string;
+  // string | null because JSON null doesn't satisfy undefined; omitting renders no badge
+  arxiv?: string | null;
+  journalUrl?: string | null;
+  webpage?: string | null;
+  github?: string | null;
+}
+
+const { title, image, authors, year, journal, arxiv, journalUrl, webpage, github } = Astro.props;
+---
+
+<article class="pub-card">
+  {image && (
+    <div class="pub-image">
+      <img src={image} alt={title} loading="lazy" />
+    </div>
+  )}
+  <div class="pub-content">
+    <h3 class="pub-title">{title}</h3>
+    <p class="pub-authors">{authors}</p>
+    <p class="pub-venue">
+      <span class="pub-journal">{journal}</span>
+      <span class="pub-year">{year}</span>
+    </p>
+    <div class="pub-links">
+      {arxiv && (
+        <a href={arxiv} class="pub-link" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-alt"></i>
+          arXiv
+        </a>
+      )}
+      {journalUrl && (
+        <a href={journalUrl} class="pub-link" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-book-open"></i>
+          Journal
+        </a>
+      )}
+      {webpage && (
+        <a href={webpage} class="pub-link" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-globe"></i>
+          Project
+        </a>
+      )}
+      {github && (
+        <a href={github} class="pub-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          Code
+        </a>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .pub-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: flex-start;
+  }
+
+  /* :global is required to reach the dark-mode class on <body>, which is outside this component's scope */
+  :global(body.dark-mode) .pub-card {
+    border-bottom-color: #1e293b;
+  }
+
+  .pub-card:last-child {
+    border-bottom: none;
+  }
+
+  .pub-image {
+    flex-shrink: 0;
+    width: 160px;
+  }
+
+  .pub-image img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+  }
+
+  .pub-content {
+    flex: 1;
+    min-width: 0; /* prevents flex child from overflowing its container */
+  }
+
+  .pub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 0.4rem 0;
+    line-height: 1.4;
+  }
+
+  :global(body.dark-mode) .pub-title {
+    color: #f1f5f9;
+  }
+
+  .pub-authors {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0 0 0.3rem 0;
+  }
+
+  :global(body.dark-mode) .pub-authors {
+    color: #94a3b8;
+  }
+
+  .pub-venue {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.75rem 0;
+    font-style: italic;
+  }
+
+  :global(body.dark-mode) .pub-venue {
+    color: #94a3b8;
+  }
+
+  .pub-year {
+    margin-left: 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .pub-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    color: #374151;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  :global(body.dark-mode) .pub-link {
+    border-color: #334155;
+    color: #00ff88;
+  }
+
+  .pub-link:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+    color: #111827;
+  }
+
+  :global(body.dark-mode) .pub-link:hover {
+    background-color: #1e293b;
+    border-color: #00ff88;
+    color: #00ffaa;
+  }
+
+  .pub-link i {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 600px) {
+    .pub-image {
+      display: none;
+    }
+  }
+</style>

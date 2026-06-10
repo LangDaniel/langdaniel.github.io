@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Hierarchical Adaptive networks with Task vectors for Test-Time Adaptation",
+    "image": "/images/thumbnail_hivec_paper.png",
+    "authors": "Sameer Ambekar, Marta Hasny, Laura Alexandra Daza, Daniel M. Lang* and Julia A. Schnabel*",
+    "year": 2026,
+    "journal": "WACV",
+    "arxiv": null,
+    "journalUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Ambekar_Hierarchical_Adaptive_networks_with_Task_vectors_for_Test-Time_Adaptation_WACV_2026_paper.html",
+    "webpage": null,
+    "github": null
+  },
+  {
+    "title": "Temporal Neural Cellular Automata: Application to modeling of contrast enhancement in breast MRI",
+    "image": "/images/thumbnail_tenca_paper.png",
+    "authors": "Daniel M. Lang, Richard Osuala, Veronika Spieker, Karim Lekadir, Rickmer Braren and Julia A. Schnabel",
+    "year": 2025,
+    "journal": "MICCAI",
+    "arxiv": "https://arxiv.org/abs/2506.18720",
+    "journalUrl": "https://link.springer.com/chapter/10.1007/978-3-032-04965-0_57",
+    "webpage": "https://langdaniel.github.io/TeNCA/",
+    "github": "https://github.com/LangDaniel/TeNCA"
+  },
+  {
+    "title": "Towards learning contrast kinetics with multi-condition latent diffusion models",
+    "image": "/images/thumbnail_ccnet_paper.png",
+    "authors": "Richard Osuala, Daniel M. Lang, Preeti Verma, Smriti Joshi, ..., Julia A. Schnabel and Karim Lekadir",
+    "year": 2024,
+    "journal": "MICCAI",
+    "arxiv": "https://arxiv.org/abs/2403.13890",
+    "journalUrl": "https://link.springer.com/chapter/10.1007/978-3-031-72086-4_67",
+    "webpage": null,
+    "github": "https://github.com/RichardObi/ccnet"
+  },
+  {
+    "title": "Multispectral 3D masked autoencoders for anomaly detection in non-contrast enhanced breast MRI",
+    "image": "/images/thumbnail_maemi_paper.png",
+    "authors": "Daniel M. Lang, Eli Schwartz, Cosmin I. Bercea, Raja Giryes and Julia A. Schnabel",
+    "year": 2023,
+    "journal": "MICCAI Workshop on Cancer Prevention through Early Detection",
+    "arxiv": "https://arxiv.org/abs/2303.05861",
+    "journalUrl": "https://link.springer.com/chapter/10.1007/978-3-031-45350-2_5",
+    "webpage": null,
+    "github": null
+  },
+  {
+    "title": "Deep Learning Based HPV Status Prediction for Oropharyngeal Cancer Patients",
+    "image": "/images/thumbnail_hpv_paper.png",
+    "authors": "Daniel M. Lang, Jan C. Peeken, Stephanie E. Combs, Jan J. Wilkens and Stefan Bartzsch",
+    "year": 2021,
+    "journal": "Cancers",
+    "arxiv": "https://arxiv.org/abs/2011.08555",
+    "journalUrl": "https://www.mdpi.com/2072-6694/13/4/786",
+    "webpage": null,
+    "github": "https://github.com/LangDaniel/hpv_status"
+  }
+]

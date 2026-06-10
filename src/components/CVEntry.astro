@@ -1,0 +1,87 @@
+---
+interface Props {
+  timeframe: string;
+  title: string;
+  // string | null because JSON null doesn't satisfy undefined; omitting renders no description
+  description?: string | null;
+}
+
+const { timeframe, title, description } = Astro.props;
+---
+
+<article class="cv-entry">
+  <div class="cv-timeframe">{timeframe}</div>
+  <div class="cv-content">
+    <h4 class="cv-title">{title}</h4>
+    {description && <p class="cv-description">{description}</p>}
+  </div>
+</article>
+
+<style>
+  .cv-entry {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: flex-start;
+  }
+
+  :global(body.dark-mode) .cv-entry {
+    border-bottom-color: #1e293b;
+  }
+
+  .cv-entry:last-child {
+    border-bottom: none;
+  }
+
+  .cv-timeframe {
+    flex-shrink: 0;
+    width: 140px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+  }
+
+  :global(body.dark-mode) .cv-timeframe {
+    color: #94a3b8;
+  }
+
+  .cv-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cv-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 0.4rem 0;
+    line-height: 1.4;
+  }
+
+  :global(body.dark-mode) .cv-title {
+    color: #f1f5f9;
+  }
+
+  .cv-description {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  :global(body.dark-mode) .cv-description {
+    color: #94a3b8;
+  }
+
+  @media (max-width: 600px) {
+    .cv-entry {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .cv-timeframe {
+      width: auto;
+    }
+  }
+</style>

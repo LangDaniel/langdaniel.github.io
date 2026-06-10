@@ -1,0 +1,51 @@
+{
+  "experience": [
+    {
+      "timeframe": "11/2022 - Present",
+      "title": "Postdoctoral Researcher, Helmholtz Munich",
+      "description": "Institute of Machine Learning in Biomedical Imaging "
+    },
+    {
+      "timeframe": "11/2022 - Present",
+      "title": "Visiting Researcher, TUM Klinikum rechts der Isar",
+      "description": "Institut für diagnostische und interventionelle Radiologie"
+    },
+    {
+      "timeframe": "11/2018 - 10/2022",
+      "title": "Doctoral Researcher, Helmholtz Munich",
+      "description": "Institute for Radiation Medicine"
+    },
+    {
+      "timeframe": "02/2019 - 10/2022",
+      "title": "Visiting Researcher, TUM Klinikum rechts der Isar",
+      "description": "Klinik für RadioOnkologie und Strahlentherapie"
+    }
+  ],
+  "education": [
+    {
+      "timeframe": "11/2018 - 10/2022",
+      "title": "PhD in Physics, Technical University of Munich",
+      "description": "Grade: Magna cum laude"
+    },
+    {
+      "timeframe": "10/2016 - 06/2018",
+      "title": "MSc. in Physics, University of Regensburg and DESY Hamburg",
+      "description": null
+    },
+    {
+      "timeframe": "10/2012 - 09/2016",
+      "title": "BSc. in Physics, University of Regensburg",
+      "description": null
+    },
+    {
+      "timeframe": "09/2010 - 09/2012",
+      "title": "University Entrance Qualification, Maximilian-Kolbe Schule, Neumarkt i.d. OPf.",
+      "description": null
+    },
+    {
+      "timeframe": "09/2006 - 04/2010",
+      "title": "Apprenticeship as Industrial Electronics Technician, MAN Nutzfahrzeuge AG, Nuremberg",
+      "description": null
+    }
+  ]
+}
