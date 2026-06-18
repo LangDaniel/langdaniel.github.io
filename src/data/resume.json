@@ -3,7 +3,7 @@
     {
       "timeframe": "11/2022 - Present",
       "title": "Postdoctoral Researcher, Helmholtz Munich",
-      "description": "Institute of Machine Learning in Biomedical Imaging "
+      "description": "Institute of Machine Learning in Biomedical Imaging"
     },
     {
       "timeframe": "11/2022 - Present",
@@ -46,6 +46,23 @@
       "timeframe": "09/2006 - 04/2010",
       "title": "Apprenticeship as Industrial Electronics Technician, MAN Nutzfahrzeuge AG, Nuremberg",
       "description": null
+    }
+  ],
+  "fellowships": [
+    {
+      "timeframe": "02/2026 - 04/2026",
+      "title": "Science Meets Politics Fellow in the Office of Ayşe Asar, MP",
+      "description": "Funded by the Wilhelm and Else Heraeus Foundation"
+    },
+    {
+      "timeframe": "03/2024 - 03/2026",
+      "title": "Helmholtz High Potentials Fellow",
+      "description": "Helmholtz Munich Postdoc Program"
+    },
+    {
+      "timeframe": "05/2022 - 07/2022",
+      "title": "Research Stay at University of Tel Aviv, School of Electrical Engineering",
+      "description": "Funded by the Helmholtz Israel Exchange Program"
     }
   ]
 }
