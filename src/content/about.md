@@ -1,3 +1,1 @@
-I am a postdoctoral researcher at Helmholtz Munich, building machine learning models that push the boundaries of medical imaging.
-My work spans self-supervised learning, dynamic imaging, anomaly detection and domain adaptation, with a focus on making models robust enough for real clinical use.
-I care about steering machine learning toward meaningful, real-world benefit.
+How can we turn AI into applications that create value in the real world? As a postdoctoral researcher in medical imaging I focus on building machine learning and computer vision models designed to hold up outside the lab. My work spans self-supervised learning, generative modeling, anomaly detection, and domain adaptation, with a focus on making models robust enough for deployment on messy, real-world data.
