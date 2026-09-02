@@ -2,23 +2,13 @@
   "experience": [
     {
       "timeframe": "11/2022 - Present",
-      "title": "Postdoctoral Researcher, Helmholtz Munich",
+      "title": "Senior Researcher, Helmholtz Munich and Technical University of Munich",
       "description": "Institute of Machine Learning in Biomedical Imaging"
     },
     {
-      "timeframe": "11/2022 - Present",
-      "title": "Visiting Researcher, TUM Klinikum rechts der Isar",
-      "description": "Institute for Diagnostic and Interventional Radiology"
-    },
-    {
       "timeframe": "11/2018 - 10/2022",
-      "title": "Doctoral Researcher, Helmholtz Munich",
+      "title": "Doctoral Researcher, Helmholtz Munich and Klinikum Rechts der Isar",
       "description": "Institute of Radiation Medicine"
-    },
-    {
-      "timeframe": "02/2019 - 10/2022",
-      "title": "Visiting Researcher, TUM Klinikum rechts der Isar",
-      "description": "Department of Radiation Oncology"
     }
   ],
   "education": [
